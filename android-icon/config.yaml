@@ -13,6 +13,8 @@ startup: services
 boot: auto
 hassio_api: false
 homeassistant_api: false
+ingress: true
+ingress_port: 1337
 host_network: true
 options: {}
 schema: {}
