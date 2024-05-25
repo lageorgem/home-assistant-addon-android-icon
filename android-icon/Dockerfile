@@ -9,9 +9,6 @@ COPY rootfs /usr/src
 # Install dependencies
 RUN npm install
 
-# Make run.sh executable
-RUN chmod +x /usr/src/app/run.sh
-
 # Expose the port the app runs on
 EXPOSE 1337
 
