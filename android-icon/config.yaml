@@ -2,6 +2,7 @@ name: android-icon
 version: '1.0'
 slug: android_icon
 description: Retrieve the icon of an android app
+url: "https://github.com/lageorgem/home-assistant-addon-android-icon/tree/main/android-icon"
 arch:
 - armhf
 - armv7
