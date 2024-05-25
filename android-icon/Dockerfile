@@ -1,12 +1,11 @@
-FROM node:14
-
-# Set working directory
-WORKDIR /usr/src/app
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 # Copy application files
-COPY app.js .
-COPY package*.json ./
-COPY run.sh .
+COPY rootfs /
+
+# Set working directory
+WORKDIR /usr/bin
 
 # Install dependencies
 RUN npm install
@@ -18,4 +17,4 @@ RUN chmod +x /usr/src/app/run.sh
 EXPOSE 1337
 
 # Run the application
-CMD ["/usr/src/app/run.sh"]
+CMD ["node /usr/bin/app.js"]
