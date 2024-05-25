@@ -7,7 +7,7 @@
       "name": "android-icon",
       "slug": "android_icon",
       "description": "My custom Home Assistant add-on",
-      "url": "https://github.com/lageorgem/home-assistant-addon-android-icon/android-icon",
+      "url": "https://github.com/lageorgem/home-assistant-addon-android-icon/tree/main/android-icon",
       "version": "1.0",
       "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"]
     }
