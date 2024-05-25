@@ -1,0 +1,15 @@
+{
+  "name": "android-icon",
+  "version": "1.0",
+  "slug": "android_icon",
+  "description": "Retrieve the icon of an android app",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "services",
+  "boot": "auto",
+  "hassio_api": false,
+  "homeassistant_api": false,
+  "host_network": true,
+  "options": {},
+  "schema": {},
+  "webui": "http://[HOST]:1337"
+}

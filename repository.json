@@ -1,0 +1,15 @@
+{
+  "name": "Android Icon Add-ons Repository",
+  "url": "https://github.com/lageorgem/home-assistant-addon-android-icon",
+  "maintainer": "Glazura",
+  "addons": [
+    {
+      "name": "android-icon",
+      "slug": "android_icon",
+      "description": "My custom Home Assistant add-on",
+      "url": "https://github.com/lageorgem/home-assistant-addon-android-icon/android-icon",
+      "version": "1.0",
+      "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"]
+    }
+  ]
+}
