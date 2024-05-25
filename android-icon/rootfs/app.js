@@ -9,20 +9,20 @@ const app = express()
 
 app.use(cors());
 
-app.get('/app/:id', async function (req, res) {
-    const imagePath = path.resolve(__dirname, `./downloads/${req.params.id}.png`);
+app.get('/app', async function (req, res) {
+    const imagePath = path.resolve(__dirname, `./downloads/${req.query.app_id}.png`);
 
     // Check if the image already exists
     if (fs.existsSync(imagePath)) {
         const imageBuffer = fs.readFileSync(imagePath);
 
         res.setHeader('Content-Type', 'image/png');
-        res.setHeader('Content-Disposition', `inline;filename="${req.params.id}.png"`);
+        res.setHeader('Content-Disposition', `inline;filename="${req.query.app_id}.png"`);
         res.setHeader('Cache-Control', 'public, max-age=86400, no-transform');
         return res.send(imageBuffer);
     }
 
-    const url = `https://play.google.com/store/apps/details?id=${req.params.id}`
+    const url = `https://play.google.com/store/apps/details?id=${req.query.app_id}`
     const model = "img[alt='Icon image'] (src)"
 
     const page = await axios.get(url);
@@ -40,7 +40,7 @@ app.get('/app/:id', async function (req, res) {
     fs.writeFileSync(imagePath, image.data);
 
     res.setHeader('Content-Type', 'image/png');
-    res.setHeader('Content-Disposition', `inline;filename="${req.params.id}.png"`)
+    res.setHeader('Content-Disposition', `inline;filename="${req.query.app_id}.png"`)
     res.setHeader('Cache-Control', 'public, max-age=86400, no-transform')
     res.send(image.data)
 })

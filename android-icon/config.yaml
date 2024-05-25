@@ -15,7 +15,6 @@ hassio_api: false
 homeassistant_api: false
 ingress: true
 ingress_port: 1337
-ingress_entry: /
 host_network: true
 options: {}
 schema: {}
