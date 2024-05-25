@@ -1,11 +1,10 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
-
-# Copy application files
-COPY rootfs /
+FROM node:18
 
 # Set working directory
-WORKDIR /usr/bin
+WORKDIR /usr/src
+
+# Copy application files
+COPY rootfs /usr/src
 
 # Install dependencies
 RUN npm install
