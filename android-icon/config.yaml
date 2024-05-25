@@ -16,4 +16,4 @@ homeassistant_api: false
 host_network: true
 options: {}
 schema: {}
-webui: http://[HOST]:1337
+webui: http://[HOST]:[PORT:1337]
