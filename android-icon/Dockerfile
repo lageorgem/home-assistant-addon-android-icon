@@ -16,4 +16,4 @@ RUN chmod +x /usr/src/app/run.sh
 EXPOSE 1337
 
 # Run the application
-CMD ["node /usr/bin/app.js"]
+CMD ["node /usr/src/app.js"]
