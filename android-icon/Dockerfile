@@ -13,4 +13,4 @@ RUN npm install
 EXPOSE 1337
 
 # Run the application
-CMD ["node /usr/src/app.js"]
+CMD ["node app.js"]
