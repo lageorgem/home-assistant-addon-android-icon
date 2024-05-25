@@ -10,11 +10,11 @@ const app = express()
 app.use(cors());
 
 app.get('/app', async function (req, res) {
-    const imagePath = path.resolve(__dirname, `./downloads/${req.query.app_id}.png`);
-
-    if (!imagePath) {
+    if (!req.query.app_id) {
         return res.status(404).send('No app ID');
     }
+
+    const imagePath = path.resolve(__dirname, `./downloads/${req.query.app_id}.png`);
 
     // Check if the image already exists
     if (fs.existsSync(imagePath)) {
